@@ -1,0 +1,29 @@
+//exercicio 4
+
+import java.util.Scanner;
+
+class Exercicio_quatro {
+  void exercicio_quatro(Scanner entrada) {
+    
+    Integer soma = 0;
+    Integer produto = 1;
+    Integer num = 0;
+    
+    while (num >= 0) {
+      
+      System.out.print("Digite algum número (Números negativos fecharam o programa): ");
+      num = entrada.nextInt();
+      
+      if(num % 2 == 0) {
+        soma += num;
+        System.out.println("Soma = " + soma);
+        
+      } else {
+        produto *= num;
+        System.out.println("Produto = " + produto);
+      }
+      
+    }
+    
+  }
+}
