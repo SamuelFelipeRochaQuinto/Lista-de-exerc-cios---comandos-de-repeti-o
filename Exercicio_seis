@@ -1,0 +1,40 @@
+//exercicio 6
+
+import java.util.Random;
+
+class Exercicio_seis {
+  void exercicio_seis() {
+    
+    Boolean vencedor = false;
+    Integer kills = 0;
+    Integer deaths = 0;
+    Integer assists = 0;
+    Integer rodada = 1;
+    Random gerador = new Random();
+    
+    while (!vencedor) {
+      
+      System.out.println("Round " + rodada + " START!");
+      
+      int kills_round = gerador.nextInt(9) + 0;
+      int deaths_round = gerador.nextInt(20) + 0;
+      int assists_round = gerador.nextInt(20) + 0;
+      
+      kills += kills_round;
+      deaths += deaths_round;
+      assists += assists_round;
+      
+      System.out.printf("Round stats: \nKills: %d \nDeaths: %d \nAssists: %d", kills_round , deaths_round , assists_round);
+      System.out.println();
+      
+      rodada++;
+      
+      vencedor = gerador.nextBoolean();
+      
+    }
+    
+    System.out.printf("MATCH STATS: \nKills: %d \nDeaths: %d \nAssists: %d", kills , deaths , assists);
+    System.out.println();
+    
+  }
+}
