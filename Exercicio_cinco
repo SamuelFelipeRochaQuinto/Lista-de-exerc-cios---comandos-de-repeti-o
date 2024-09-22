@@ -1,0 +1,46 @@
+//exercicio 5
+
+import java.util.Scanner;
+
+class Exercicio_cinco {
+  void exercicio_cinco(Scanner entrada) {
+    
+    Integer ordem_pessoas = 1;
+    Integer qntia_50mais = 0;
+    Double soma_altura = 0.0;
+    Integer qntia_altura = 0;
+    Double peso_menor40 = 0.0;
+    
+    while (ordem_pessoas <= 10) {
+      
+      System.out.print("Informe a idade da " + ordem_pessoas + "° pessoa: ");
+      int idade = entrada.nextInt();
+      
+      System.out.print("Informe a altura (em m) da " + ordem_pessoas + "° pessoa: ");
+      double altura = entrada.nextDouble();
+      
+      System.out.print("Informe peso (em kg) da " + ordem_pessoas + "° pessoa: ");
+      double peso = entrada.nextDouble();
+      
+      if(idade > 50) {
+        qntia_50mais++;
+        
+      } else if (idade > 10 && idade < 20) {
+        soma_altura += altura;
+        qntia_altura++;
+      }
+      
+      if(peso < 40) {
+        peso_menor40++;
+      }
+      
+      ordem_pessoas++;
+      
+    }
+    
+    System.out.println("(a) " + qntia_50mais + " pessoas com mais de 50 anos");
+    System.out.println("(b) a média  das alturas das pessoas com idade entre 10 e 20 anos é " + (soma_altura/qntia_altura) + "m");
+    System.out.println("(c) " + (peso_menor40*10) + "% das pessoas tem peso inferior a 40kg");
+    
+  }
+}
