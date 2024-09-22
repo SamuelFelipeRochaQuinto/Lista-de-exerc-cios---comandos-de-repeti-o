@@ -1,12 +1,18 @@
 //exercicio 2
 
-class Exercicio_um {
-  void exercicio_um(Integer num_partida) {
-
-    for (int i = 0; i <= 100; i++) {
-      System.out.println(num_partida);
-      num_partida++;
+class Exercicio_dois {
+  
+  Double numA = 0.0;
+  Integer numB = 0;
+  
+  public void exercicio_dois() {
+    Double resultado = 0.0;
+    
+    for (int i = numB; i > 0; i--) {
+      resultado += numA;
     }
+    
+    System.out.println(resultado);
     
   }
 }
