@@ -1,0 +1,144 @@
+//exercicio 7
+
+import java.util.Scanner;
+
+class Exercicio_sete {
+  void exercicio_sete(Scanner entrada) {
+    
+    Integer colunas = 0;
+    Integer linha = 0;
+    Integer estagio = 0;
+    
+    System.out.print("Digite o número desejado de colunas: ");
+    colunas = entrada.nextInt();
+    
+    while (true) {
+      
+      System.out.println("Escolha a forma desejada: \n1.Retângulo \n2.Diagonal superior esquerda \n3.Diagonal superior direita");
+      System.out.println("4.Diagonal inferior esquerda \n5.diagonal inferior direita \n6.Sair");
+      Integer opcao = entrada.nextInt();
+      linha = colunas;
+      estagio = 0;
+      
+      switch (opcao) {
+          
+        case 1:
+          
+          
+          while(linha > 0){
+            
+            for(int i = colunas; i > 0; i--) {
+              System.out.print("*");
+            }
+            
+            System.out.println();
+            linha--;
+            
+          }
+          
+          break;
+          
+        case 2:
+          
+          while(linha > 0) {
+            
+            for(int i = (colunas-estagio); i > 0; i--){
+              System.out.print("*");
+            }
+            
+            estagio++;
+            
+            System.out.println();
+            linha--;
+            
+          }
+          
+          break;
+          
+        case 3:
+          int estg = 0;
+          while(linha > 0){
+            
+            for(int i = colunas; i >0; i--){
+              
+              if(estg > 0){
+                System.out.print(" ");
+                estg--;
+              } else {
+                System.out.print("*");
+              }
+              
+            }
+            
+            estagio++;
+            estg = estagio;
+            
+            System.out.println();
+            linha--;
+            
+          }
+          
+          break;
+          
+        case 4:
+          int stg = 0;
+          while(linha > 0){
+            
+            for(int i = colunas; i >0; i--){
+              
+              if(stg >= 0){
+                System.out.print("*");
+                stg--;
+              } else {
+                System.out.print(" ");
+              }
+              
+            }
+            
+            estagio++;
+            stg = estagio;
+            
+            System.out.println();
+            linha--;
+            
+          }
+          
+          break;
+          
+        case 5:
+          
+          while(linha > 0){
+            
+            for(int i = colunas; i >0; i--){
+              
+              if(i > estagio+1){
+                System.out.print(" ");
+              } else {
+                System.out.print("*");
+              }
+              
+            }
+            
+            estagio++;
+            
+            System.out.println();
+            linha--;
+            
+          }
+          
+          break;
+          
+        case 6:
+          System.out.println("Saindo...");
+          return;
+          
+        default:
+          System.out.println("Opção inválida! \nReiniciando...");
+          break;
+          
+      }
+      
+    }
+    
+  }
+}
