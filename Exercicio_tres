@@ -1,0 +1,58 @@
+//exercicio 3
+
+import java.util.Scanner;
+
+class Exercicio_tres {
+  
+  void exercicio_tres() {
+    
+    Integer opcao = 0;
+    Integer tempo = 0;
+    Integer minutos = 0;
+    Double massa = 0.0;
+    Scanner entrada = new Scanner(System.in);
+    
+    while (true) {
+      
+      System.out.println("Escolha uma opção: \n1.Caulcular o tempo \n2.Sair");
+      opcao = entrada.nextInt();
+      
+      switch (opcao) {
+          
+        case 1:
+          
+          System.out.print("Informe a massa do material (em gramas): ");
+          massa = entrada.nextDouble();
+
+          for (double i = massa; i > 0.1; i -= (i/4))
+          tempo += 1;
+
+          while (tempo >= 60) {
+            minutos++;
+            tempo -= 60;
+          }
+
+          if(minutos != 0) {
+            System.out.println(minutos + " minutos e " + tempo + "segundos.");
+          } else {
+            System.out.println(tempo + " segundos.");
+          }
+          
+          break;
+          
+        case 2:
+          System.out.println("Retornando ao menu inicial...");
+          return;
+          
+        default:
+          System.out.println("Opção inválida! \nReiniciando questão...");
+          break;
+          
+      }
+      
+    }
+    
+    
+    
+  }
+}
