@@ -1,0 +1,73 @@
+//main
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    
+    Integer opcao = 0;
+    Scanner entrada = new Scanner(System.in);
+    Exercicio_um exercicioUm = new Exercicio_um();
+    Exercicio_dois exercicioDois = new Exercicio_dois();
+    Exercicio_tres exercicioTres = new Exercicio_tres();
+    Exercicio_quatro exercicioQuatro = new Exercicio_quatro();
+    Exercicio_cinco exercicioCinco = new Exercicio_cinco();
+    Exercicio_seis exercicioSeis = new Exercicio_seis();
+    Exercicio_sete exercicioSete = new Exercicio_sete();
+    
+    while (opcao != 8) {
+      
+      System.out.println("Escolha a questão da lista: \n1 \n2 \n3 \n4 \n5 \n6 \n7 \n8. Sair");
+      opcao = entrada.nextInt();
+      
+      switch(opcao) {
+          
+        case 1:
+          System.out.print("De qual número deseja começar a contagem? ");
+          exercicioUm.exercicio_um(entrada.nextInt());
+          break;
+          
+        case 2:
+          System.out.print("Informe o primeiro número (NÚMERO REAL): ");
+          exercicioDois.numA = entrada.nextDouble();
+          
+          System.out.print("Informe o segundo número (NÚMERO INTEIRO): ");
+          exercicioDois.numB = entrada.nextInt();
+          
+          exercicioDois.exercicio_dois();
+          break;
+          
+        case 3:
+          exercicioTres.exercicio_tres();
+          break;
+          
+        case 4:
+          exercicioQuatro.exercicio_quatro(entrada);
+          break;
+          
+        case 5:
+          exercicioCinco.exercicio_cinco(entrada);
+          break;
+          
+        case 6:
+          exercicioSeis.exercicio_seis();
+          break;
+          
+        case 7:
+          exercicioSete.exercicio_sete(entrada);
+          break;
+          
+        case 8:
+          System.out.println("Saindo...");
+          break;
+          
+        default:
+          System.out.println("Opção inválida! \nReiniciando...");
+          break;
+          
+      }
+      
+    }
+    
+    
+  }
+}
