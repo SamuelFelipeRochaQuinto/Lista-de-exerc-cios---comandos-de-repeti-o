@@ -16,13 +16,27 @@ class Exercicio_seis {
       
       System.out.println("Round " + rodada + " START!");
       
-      int kills_round = gerador.nextInt(9) + 0;
+      int kills_round = gerador.nextInt(30) + 0;
       int deaths_round = gerador.nextInt(20) + 0;
       int assists_round = gerador.nextInt(20) + 0;
       
       kills += kills_round;
       deaths += deaths_round;
       assists += assists_round;
+      
+      if(kills_round <= 5) {
+        System.out.println("noob");
+      } else if (kills_round >= 20) {
+        System.out.println("master");
+      }
+      
+      if(deaths_round > 20) {
+        System.out.println("“Houston, we have a problem");
+      }
+      
+      if(assists_round > 20) {
+        System.out.println("Team Work!");
+      }
       
       System.out.printf("Round stats: \nKills: %d \nDeaths: %d \nAssists: %d", kills_round , deaths_round , assists_round);
       System.out.println();
