@@ -10,6 +10,7 @@ class Exercicio_cinco {
     Double soma_altura = 0.0;
     Integer qntia_altura = 0;
     Double peso_menor40 = 0.0;
+    Double media_altura = 0.0;
     
     while (ordem_pessoas <= 10) {
       
@@ -38,8 +39,12 @@ class Exercicio_cinco {
       
     }
     
+    if(qntia_altura != 0){
+      media_altura = soma_altura/qntia_altura;
+    }
+    
     System.out.println("(a) " + qntia_50mais + " pessoas com mais de 50 anos");
-    System.out.println("(b) a média  das alturas das pessoas com idade entre 10 e 20 anos é " + (soma_altura/qntia_altura) + "m");
+    System.out.println("(b) a média  das alturas das pessoas com idade entre 10 e 20 anos é " + (media_altura) + "m");
     System.out.println("(c) " + (peso_menor40*10) + "% das pessoas tem peso inferior a 40kg");
     
   }
